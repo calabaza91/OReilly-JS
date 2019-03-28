@@ -51,8 +51,12 @@ while(funds > 0 || funds < 100){
       Object.keys(bets).map(face => `${face}: ${bets[face]} pence`).join(', ') +
     ` (Total: ${totalBet} pence)`);
 
-
   //roll dice
-
+  const hand = [];
+  for(let roll=0; roll < 3; roll++){
+    hand.push(randFace());
+  }
+  console.log(`\tHand: ${hand.join(', ')}`);
+  
   //collect winnings
 }
