@@ -57,6 +57,14 @@ while(funds > 0 || funds < 100){
     hand.push(randFace());
   }
   console.log(`\tHand: ${hand.join(', ')}`);
-  
+
   //collect winnings
+  let winnings = 0;
+  for(let die=0; die < hand.length; die++){
+    let face = hand[die];
+    if(bets[face] > 0) winnings = winnings + bets[face];
+  }
+  funds = funds + winnings;
+  console.log(`\tWinnings: ${winnings}`);
+  console.log(`\tEnding Funds: ${funds}`);
 }
