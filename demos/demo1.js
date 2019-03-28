@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //use npm underscore
 const _ = require('underscore');
 
