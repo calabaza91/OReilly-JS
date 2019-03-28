@@ -46,7 +46,10 @@ while(funds > 0 || funds < 100){
       remaining = remaining - bet;
     } while (remaining > 0)
   }
-
+  funds = funds - totalBet;
+  console.log("\tBets: " +
+      Object.keys(bets).map(face => `${face}: ${bets[face]} pence`).join(', ') +
+    ` (Total: ${totalBet} pence)`);
 
 
   //roll dice
