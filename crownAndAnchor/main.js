@@ -30,7 +30,7 @@ while(funds > 0 && funds < 100){
   console.log(`Round ${round}:`);
   console.log(`\tStarting Funds: ${funds}p`);
   //place bets
-  let bets = {crown:0, anchor:0, heart:0, spade:0, club:0, diamond:0};
+  let bets = {Crown:0, Anchor:0, Heart:0, Spade:0, Club:0, Diamond:0};
   let totalBet  = rand(1, funds);
 
   if(totalBet === 7){
@@ -47,9 +47,8 @@ while(funds > 0 && funds < 100){
     } while (remaining > 0)
   }
   funds = funds - totalBet;
-  console.log("\tBets: " +
-      Object.keys(bets).map(face => `${face}: ${bets[face]} pence`).join(', ') +
-    ` (Total: ${totalBet} pence)`);
+  console.log("\tBets: " + Object.keys(bets).map(face => `${face}:${bets[face]} pence`).join(', ') +
+    `(Total: ${totalBet} pence)`);
 
   //roll dice
   const hand = [];
@@ -67,5 +66,5 @@ while(funds > 0 && funds < 100){
   }
   funds = funds + winnings;
   console.log(`\tWinnings: ${winnings}`);
-  console.log(`\tEnding Funds: ${funds}`);
 }
+console.log(`\tEnding Funds: ${funds}`);
