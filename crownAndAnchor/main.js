@@ -24,7 +24,7 @@ function randFace(){
 let funds = 50;
 let round = 0;
 
-while(funds > 0 || funds < 100){
+while(funds > 0 && funds < 100){
 
   round++;
   console.log(`Round ${round}:`);
@@ -62,7 +62,8 @@ while(funds > 0 || funds < 100){
   let winnings = 0;
   for(let die=0; die < hand.length; die++){
     let face = hand[die];
-    if(bets[face] > 0) winnings = winnings + bets[face];
+    if(bets[face] > 0)
+     winnings = winnings + bets[face];
   }
   funds = funds + winnings;
   console.log(`\tWinnings: ${winnings}`);
